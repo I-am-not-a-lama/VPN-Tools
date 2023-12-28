@@ -1,0 +1,11 @@
+---
+# defaults file for roles/ss_cert
+ss_cert_ca_key: ca.key
+ss_cert_ca_path: ca.pem
+ss_cert_ca_passphrase: null
+
+ss_cert_key: cert-key.key
+ss_cert_path: certificate.key
+
+ss_cert_cn: "{{ ansible_host }}"
+ss_cert_san: "{{ ss_cert_cn }}"

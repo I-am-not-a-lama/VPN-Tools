@@ -1,0 +1,7 @@
+---
+# defaults file for roles/ipsec
+ipsec_leftid: "{{ ansible_host }}"
+ipsec_leftsubnet: 0.0.0.0/0
+ipsec_rightsourceip: 10.0.0.0/24
+ipsec_rightdns: 8.8.8.8,8.8.4.4
+ipsec_compress: false

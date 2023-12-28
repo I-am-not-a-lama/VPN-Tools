@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name {{ domain_name }};
+    root {{ le_cert_site_directory }};
+    location ~ /.well-known {
+        root {{ le_cert_acme_challenge_directory }};
+        allow all;
+    }
+    if ($uri !~ /.well-known){
+        return 301 https://$host$request_uri;
+    }
+}

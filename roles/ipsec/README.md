@@ -1,0 +1,36 @@
+IPSec installation
+=========
+
+The role installs and configures IPSec.
+
+Requirements
+------------
+
+- Ubuntu 20.04
+- Ubuntu 22.04
+
+Role Variables
+--------------
+
+```
+ipsec_leftid: "{{ ansible_host }}"
+ipsec_leftsubnet: 0.0.0.0/0
+ipsec_rightsourceip: 10.0.0.0/24
+ipsec_rightdns: 8.8.8.8,8.8.4.4
+ipsec_compress: false
+```
+
+
+Example Playbook
+----------------
+
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
+    - hosts: servers
+      roles:
+         - { role: ipsec, ipsec_leftid: "CN=somedomain.freemyip.com" }
+
+License
+-------
+
+BSD
